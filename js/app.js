@@ -23,20 +23,34 @@ var resultado = document.getElementById('display');
   var ocho = document.getElementById('8');
   var nueve = document.getElementById('9');
   var cero = document.getElementById('0');
-
+  var punto = document.getElementById('punto');
+  var signo = document.getElementById('sign');
   // captura de valores del teclado en pantalla
 
-
-  uno.onclick = function(e){
+//  uno.onclick = function(e){
+ /*document.getElementByClass('tecla').onclick = function(e){
+   var id =  e.element.id
     if (resultado.textContent=="0") {
       resultado.innerHTML= "" ;
-      resultado.textContent = resultado.textContent  + "1"     
+      resultado.textContent = resultado.textContent  + "1"
+      length
     }
     else if (resultado.textContent>=0)  {
       resultado.textContent = resultado.textContent  + "1";
     }
 }
+*/
+uno.onclick = function(e){
+  if (resultado.textContent=="0") {
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "1";
 
+  }
+  else if (resultado.textContent>=0)  {
+    resultado.textContent = resultado.textContent  + "1";
+  }
+
+}
 
 dos.onclick = function(e){
   if (resultado.textContent=="0") {
@@ -52,7 +66,7 @@ dos.onclick = function(e){
 tres.onclick = function(e){
   if (resultado.textContent=="0") {
     resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "3" ;   
+    resultado.textContent = resultado.textContent  + "3" ;
   }
   else if (resultado.textContent>=0)  {
     resultado.textContent = resultado.textContent  + "3";
@@ -62,7 +76,7 @@ tres.onclick = function(e){
 cuatro.onclick = function(e){
   if (resultado.textContent=="0") {
     resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "4" ;   
+    resultado.textContent = resultado.textContent  + "4" ;
   }
   else if (resultado.textContent>=0)  {
     resultado.textContent = resultado.textContent  + "4";
@@ -71,26 +85,56 @@ cuatro.onclick = function(e){
 cinco.onclick = function(e){
   if (resultado.textContent=="0") {
     resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "5" ;   
+    resultado.textContent = resultado.textContent  + "5" ;
   }
   else if (resultado.textContent>=0)  {
     resultado.textContent = resultado.textContent  + "5";
   }
 }
 seis.onclick = function(e){
+  if (resultado.textContent=="0") {
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "6" ;
+  }
+  else if (resultado.textContent>=0)  {
     resultado.textContent = resultado.textContent  + "6";
+  }
 }
 siete.onclick = function(e){
+  if (resultado.textContent=="0") {
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "7" ;
+  }
+  else if (resultado.textContent>=0)  {
     resultado.textContent = resultado.textContent  + "7";
+  }
 }
 ocho.onclick = function(e){
+  if (resultado.textContent=="0" ) {
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "8" ;
+  }
+  else if (resultado.textContent>=0 || "-")  {
     resultado.textContent = resultado.textContent  + "8";
+  }
 }
 nueve.onclick = function(e){
+  if (resultado.textContent=="0") {
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "9" ;
+  }
+  else if (resultado.textContent>=0)  {
     resultado.textContent = resultado.textContent  + "9";
+  }
 }
 cero.onclick = function(e){
+  if (resultado.textContent=="0") {
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "0" ;
+  }
+  else if (resultado.textContent>=0)  {
     resultado.textContent = resultado.textContent  + "0";
+  }
 }
 reset.onclick = function(e){
     resetear();
@@ -118,6 +162,23 @@ division.onclick = function(e){
 igual.onclick = function(e){
     operandob = resultado.textContent;
     resolver();
+}
+punto.onclick = function(e){
+  if (resultado.textContent=="0") {
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "."
+  }
+  else if (resultado.textContent>=0)  {
+    resultado.textContent = resultado.textContent  + ".";
+  }
+}
+signo.onclick = function(e){
+  if (resultado.textContent=="0" || resultado.textContent=="") {
+
+    resultado.innerHTML= "" ;
+    resultado.textContent = resultado.textContent  + "-"
+  }
+
 }
 //  metodos para resetear y limpiar pantalla
 function limpiar(){
@@ -218,6 +279,8 @@ function resolver(){
   nueve.setAttribute("style", "transform:scale(1, 1)");
 
   });
+
+
 
 
 /*function trasformar() {
