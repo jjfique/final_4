@@ -6,7 +6,7 @@ var operacion;
 
 
 // creacion del variables teclado y pantalla
-var resultado = document.getElementById('display');
+var display = document.getElementById('display');
   var reset = document.getElementById('on');
   var suma = document.getElementById('mas');
   var resta = document.getElementById('menos');
@@ -30,186 +30,193 @@ var resultado = document.getElementById('display');
 //  uno.onclick = function(e){
  /*document.getElementByClass('tecla').onclick = function(e){
    var id =  e.element.id
-    if (resultado.textContent=="0") {
-      resultado.innerHTML= "" ;
-      resultado.textContent = resultado.textContent  + "1"
+    if (display.textContent=="0") {
+      display.innerHTML= "" ;
+      display.textContent = display.textContent  + "1"
       length
     }
-    else if (resultado.textContent>=0)  {
-      resultado.textContent = resultado.textContent  + "1";
+    else if (display.textContent>=0)  {
+      display.textContent = display.textContent  + "1";
     }
 }
 */
+
 uno.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "1";
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "1";
 
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "1";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "1";
   }
 
 }
 
 dos.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "2";
+  if (display.textContent=="0" ) {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "2";
 
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "2";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "2";
   }
 
 }
 tres.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "3" ;
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "3" ;
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "3";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "3";
   }
 }
 
 cuatro.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "4" ;
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "4" ;
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "4";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "4";
   }
 }
 cinco.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "5" ;
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "5" ;
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "5";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "5";
   }
 }
 seis.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "6" ;
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "6" ;
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "6";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "6";
   }
 }
 siete.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "7" ;
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "7" ;
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "7";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "7";
   }
 }
 ocho.onclick = function(e){
-  if (resultado.textContent=="0" ) {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "8" ;
+  if (display.textContent=="0" ) {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "8" ;
   }
-  else if (resultado.textContent>=0 || "-")  {
-    resultado.textContent = resultado.textContent  + "8";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "8";
   }
 }
 nueve.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "9" ;
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "9" ;
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "9";
+  else if (display.textContent>=0 || "-")  {
+    display.textContent = display.textContent  + "9";
   }
 }
 cero.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "0" ;
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "0" ;
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + "0";
+  else if (display.textContent>=0)  {
+    display.textContent = display.textContent  + "0";
   }
 }
 reset.onclick = function(e){
     resetear();
 }
 suma.onclick = function(e){
-    operandoa = resultado.textContent;
+    Numero1 = display.textContent;
     operacion = "+";
     limpiar();
 }
 resta.onclick = function(e){
-    operandoa = resultado.textContent;
+    Numero1 = display.textContent;
     operacion = "-";
     limpiar();
 }
 multiplicacion.onclick = function(e){
-    operandoa = resultado.textContent;
+    Numero1 = display.textContent;
     operacion = "*";
     limpiar();
 }
 division.onclick = function(e){
-    operandoa = resultado.textContent;
+    Numero1 = display.textContent;
     operacion = "/";
     limpiar();
 }
 igual.onclick = function(e){
-    operandob = resultado.textContent;
-    resolver();
+  if (display.textContent == "") {
+    Numero2 = Numero1;
+    operaciones();
+  } else {
+    Numero2 = display.textContent;
+    operaciones();
+  }
+    
 }
 punto.onclick = function(e){
-  if (resultado.textContent=="0") {
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "."
+  if (display.textContent=="0") {
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "."
   }
-  else if (resultado.textContent>=0)  {
-    resultado.textContent = resultado.textContent  + ".";
+  else if (display.textContent>=0)  {
+    display.textContent = display.textContent  + ".";
   }
 }
 signo.onclick = function(e){
-  if (resultado.textContent=="0" || resultado.textContent=="") {
+  if (display.textContent=="0" || display.textContent=="") {
 
-    resultado.innerHTML= "" ;
-    resultado.textContent = resultado.textContent  + "-"
+    display.innerHTML= "" ;
+    display.textContent = display.textContent  + "-"
   }
 
 }
 //  metodos para resetear y limpiar pantalla
 function limpiar(){
-  resultado.textContent = "";
+  display.textContent = "";
 }
 function resetear(){
-  resultado.textContent = "0";
-  operandoa = 0;
-  operandob = 0;
+  display.textContent = "0";
+  Numero1 = 0;
+  Numero2 = 0;
   operacion = "";
 }
 
 /// se realiza un selector de operacion
-function resolver(){
+function operaciones(){
   var res = 0;
   switch(operacion){
     case "+":
-      res = parseFloat(operandoa) + parseFloat(operandob);
+      res = parseFloat(Numero1) + parseFloat(Numero2);
       break;
     case "-":
-        res = parseFloat(operandoa) - parseFloat(operandob);
+        res = parseFloat(Numero1) - parseFloat(Numero2);
         break;
     case "*":
-      res = parseFloat(operandoa) * parseFloat(operandob);
+      res = parseFloat(Numero1) * parseFloat(Numero2);
       break;
     case "/":
-      res = parseFloat(operandoa) / parseFloat(operandob);
+      res = parseFloat(Numero1) / parseFloat(Numero2);
       break;
   }
-  resetear();
-  resultado.textContent = res;
+  //resetear();
+  display.textContent = res;
 }
 
 // Efecto de teclas
