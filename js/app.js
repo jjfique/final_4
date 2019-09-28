@@ -1,8 +1,12 @@
+
+
+
+
+
 // variables globales
 var nunero1;
 var numero2;
 var operacion;
-
 
 
 // creacion del variables teclado y pantalla
@@ -41,29 +45,58 @@ var display = document.getElementById('display');
 }
 */
 
-uno.onclick = function(e){
-  if (display.textContent=="0") {
-    display.innerHTML= "" ;
-    display.textContent = display.textContent  + "1";
+/// posible solucion
 
-  }
-  else if (display.textContent>=0 || "-")  {
-    display.textContent = display.textContent  + "1";
+/*if(numeroText.length>8){
+  display.innerHTML = numeroText.slice(0, 8);
+  }else{
+  display.innerHTML = numeroText;
+  } }
+  Pablo Cuello 12:49
+  Esto lo aplicas para cuando agregas un número a la pantalla y cuando obtienes el resultado de una operación
+  con slice(0,8) limitas que solo se tomen los 8 primeros caracteres
+*/
+
+
+  var maxima = display.textContent.length;
+  var texto = document.getElementById('demo');
+  texto.innerHTML= maxima ;
+  if (maxima<9) {
+    teclado ();
+    
+  } else {
+    display.textContent = "error ";
   }
 
+function teclado () {
+  uno.onclick = function(e){
+    if (display.textContent=="0") {
+      display.innerHTML= "" ;
+      display.textContent = display.textContent  + "1";
+  
+    }
+    else if (display.textContent>=0 || "-")  {
+      display.textContent = display.textContent  + "1";
+    }
+  
+  }
+  dos.onclick = function(e){
+    if (display.textContent=="0" ) {
+      display.innerHTML= "" ;
+      display.textContent = display.textContent  + "2";
+  
+    }
+    else if (display.textContent>=0 || "-")  {
+      display.textContent = display.textContent  + "2";
+    }
+  
+  }
+  
 }
 
-dos.onclick = function(e){
-  if (display.textContent=="0" ) {
-    display.innerHTML= "" ;
-    display.textContent = display.textContent  + "2";
 
-  }
-  else if (display.textContent>=0 || "-")  {
-    display.textContent = display.textContent  + "2";
-  }
 
-}
+
 tres.onclick = function(e){
   if (display.textContent=="0") {
     display.innerHTML= "" ;
@@ -179,12 +212,25 @@ punto.onclick = function(e){
     display.textContent = display.textContent  + ".";
   }
 }
+//cambio de signo
 signo.onclick = function(e){
   if (display.textContent=="0" || display.textContent=="") {
 
     display.innerHTML= "" ;
     display.textContent = display.textContent  + "-"
   }
+   
+    else if (display.textContent !="0") {
+			var aux;
+			if (display.textContent.charAt(0)=="-") {
+				aux = display.textContent.slice(1);
+			}	else {
+				aux = "-" + display.textContent;
+			}
+      display.textContent = "";
+      display.textContent = aux;
+		
+		}
 
 }
 //  metodos para resetear y limpiar pantalla
@@ -220,7 +266,13 @@ function operaciones(){
 }
 
 // Efecto de teclas
+cero.addEventListener("mousedown", function () {
+  cero.style.transform = "scale(.95, .95)";
+  });
+  cero.addEventListener("mouseup", function () {
+  cero.setAttribute("style", "transform:scale(1, 1)");
 
+  });
   uno.addEventListener("mousedown", function () {
   uno.style.transform = "scale(.95, .95)";
   });
@@ -286,6 +338,69 @@ function operaciones(){
   nueve.setAttribute("style", "transform:scale(1, 1)");
 
   });
+
+  punto.addEventListener("mousedown", function () {
+  punto.style.transform = "scale(.95, .95)";
+  });
+  punto.addEventListener("mouseup", function () {
+  punto.setAttribute("style", "transform:scale(1, 1)");
+
+  });
+  igual.addEventListener("mousedown", function () {
+  igual.style.transform = "scale(.95, .95)";
+  });
+  igual.addEventListener("mouseup", function () {
+  igual.setAttribute("style", "transform:scale(1, 1)");
+
+  });
+  mas.addEventListener("mousedown", function () {
+    mas.style.transform = "scale(.95, .95)";
+    });
+    mas.addEventListener("mouseup", function () {
+    mas.setAttribute("style", "transform:scale(1, 1)");
+  
+    });
+    menos.addEventListener("mousedown", function () {
+      menos.style.transform = "scale(.95, .95)";
+      });
+      menos.addEventListener("mouseup", function () {
+      menos.setAttribute("style", "transform:scale(1, 1)");
+    
+      });
+      por.addEventListener("mousedown", function () {
+        por.style.transform = "scale(.95, .95)";
+        });
+        por.addEventListener("mouseup", function () {
+        por.setAttribute("style", "transform:scale(1, 1)");
+      
+        });
+
+        division.addEventListener("mousedown", function () {
+          division.style.transform = "scale(.95, .95)";
+          });
+          division.addEventListener("mouseup", function () {
+          division.setAttribute("style", "transform:scale(1, 1)");
+        
+          });
+          reset.addEventListener("mousedown", function () {
+            reset.style.transform = "scale(.95, .95)";
+            });
+            reset.addEventListener("mouseup", function () {
+            reset.setAttribute("style", "transform:scale(1, 1)");
+          
+            });
+            signo.addEventListener("mousedown", function () {
+              signo.style.transform = "scale(.95, .95)";
+              });
+              signo.addEventListener("mouseup", function () {
+              signo.setAttribute("style", "transform:scale(1, 1)");
+            
+              });
+            
+      
+    
+  
+
 
 
 
